@@ -23,3 +23,6 @@ function generateCat() {
     dev.appendChild(catImage);
 
 }
+
+// Challenge 3:
+
