@@ -13,3 +13,13 @@ function ageInDaysparam() {
 function resetAgeInDays() {
     document.getElementById('ageInDays-TextResult').remove();
 }
+
+// Challenge 2:
+
+function generateCat() {
+    var catImage = document.createElement('img');
+    var dev = document.getElementById('cat-gen-container');
+    catImage.src = "https://thecatapi.com/api/images/get?format=src&type=gif&size=small";
+    dev.appendChild(catImage);
+
+}

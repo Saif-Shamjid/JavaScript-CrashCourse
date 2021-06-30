@@ -2,7 +2,6 @@
     width: 70%;
     margin: 0 auto;
     /* background-color: #01535f; */
-    flex-wrap: wrap;
 }
 .heading-container {
     text-align: center;
@@ -33,4 +32,21 @@
 #ageInDays-TextResult {
     color: #0062FF;
     padding: 10px;
+}
+
+.container-2 {
+    
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+}
+.flex-box-container-2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.flex-box-container-2 img {
+    margin: 10px;
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.7);
 }
