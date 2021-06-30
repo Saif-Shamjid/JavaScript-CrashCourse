@@ -1,23 +1,36 @@
-* {
-    box-sizing: border-box;
+.container-challenge-1 {
+    width: 70%;
+    margin: 0 auto;
+    /* background-color: #01535f; */
+    flex-wrap: wrap;
+}
+.heading-container {
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: #00FF66;
 }
 
-.container-1 {
-    border: 1px solid;
-}
-
-.flex-box-1 {
-    border: 1px solid black;
+.main-ageInDays-container {
     display: flex;
     padding: 10px;
-    flex-wrap: wrap;
     justify-content: space-around;
-    margin-bottom: 10px;
 }
 
-.flex-box-1 div{
+.main-ageInDays-container .button {
     display: flex;
     padding: 10px;
     align-items: center;
+}
 
+.main-ageInDays-container .ageInDays-result{
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+#ageInDays-TextResult {
+    color: #0062FF;
+    padding: 10px;
 }
