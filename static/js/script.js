@@ -26,3 +26,13 @@ function generateCat() {
 
 // Challenge 3:
 
+function rpsGame(yourChoice) {
+    console.log(yourChoice.id);
+    humanChoice = yourChoice.id;
+    var botAsist = ['rock','paper','scissors'];
+    botChoice = botAsist[Math.floor(Math.random()*botAsist.length)];
+    // result = decideWinner(humanChoice,botChoice); //return [0,1] human lose, bot win
+    // ansText = ansText(result); //{'message': 'you win', 'color': 'green'}
+    // rpsFontEnd(humanChoice,botChoice,result);
+    console.log(botChoice);
+}
