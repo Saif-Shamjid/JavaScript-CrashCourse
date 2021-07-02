@@ -33,6 +33,13 @@ function rpsGame(yourChoice) {
     botChoice = botAsist[Math.floor(Math.random()*botAsist.length)];
     // result = decideWinner(humanChoice,botChoice); //return [0,1] human lose, bot win
     // ansText = ansText(result); //{'message': 'you win', 'color': 'green'}
-    // rpsFontEnd(humanChoice,botChoice,result);
+    // rpsFontEnd(humanChoice,botChoice,ansText);
+    
+    // mine!
+    // result = decideWinner(humanChoice,botChoice); // 0(for human win) 1(for bot win)
+    // mainAnsText = ansText(result); //'you win'
+    // mainAnsColor = ansColor(mainAnsText); 
+    // rpsFontEnd(humanChoice,botChoice,mainAnsText,mainAnsColor);
+
     console.log(botChoice);
 }
