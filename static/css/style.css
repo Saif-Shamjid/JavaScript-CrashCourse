@@ -34,7 +34,7 @@
     padding: 10px;
 }
 
-.container-2 {
+.container-2 ,.container-4{
     
     width: 70%;
     margin: 0 auto;
@@ -103,4 +103,16 @@
 .button-reset span:hover {
     padding-left: 30px;
     padding-right: 30px;
+}
+.flex-box-pic-color {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.flex-box-pic-color form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

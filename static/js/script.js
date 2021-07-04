@@ -36,11 +36,11 @@ function rpsGame(yourChoice) {
     ansText = finalResult(result); //{'message': 'you win', 'color': 'green'}
     rpsFontEnd(humanChoice,botChoice,ansText);
     
-    
-    console.log(humanChoice);
-    console.log(botChoice);
-    console.log(result);
-    console.log(ansText);
+    // for dBUg
+    // console.log(humanChoice);
+    // console.log(botChoice);
+    // console.log(result);
+    // console.log(ansText);
     
     
 }
@@ -139,3 +139,73 @@ function rpsResetClickHandler(mih,mib,mim){
     document.getElementById('rpcc').appendChild(mim);
     
 }
+
+
+
+// Challenge 4: Change the color of all button!
+
+var allButton = document.getElementsByTagName('button');
+var allButtonClass = [];
+for (let i = 0; i <allButton.length; i++) {
+   allButtonClass.push(allButton[i].classList[1]);
+}
+// console.log(allButtonClass);
+
+
+function buttonColorChange(selectedButton){
+    if (selectedButton.value ==='red') {
+        changeButtonColorRed();
+    } else if (selectedButton.value==='green') {
+        changeButtonColorGreen();
+    } else if(selectedButton.value==='reset'){
+        changeButtonColorReset();
+    } else if(selectedButton.value==='random'){
+        changeButtonColorRandom();
+    }
+}
+
+function changeButtonColorRed(){
+    var allButtonForReset = document.getElementsByTagName('button');
+     for (let i = 0; i < allButton.length; i++) {
+        allButton[i].classList.remove(allButtonForReset[i].classList[1]);
+        allButton[i].classList.add('btn-danger');
+    }    
+    document.getElementById('rps-reset').style.backgroundColor='rgb(220, 53, 69)';
+}
+
+function changeButtonColorGreen() {
+    var allButtonForReset = document.getElementsByTagName('button');
+    for (let i = 0; i < allButton.length; i++) {
+        allButton[i].classList.remove(allButtonForReset[i].classList[1]);
+        allButton[i].classList.add('btn-success');
+    }    
+    document.getElementById('rps-reset').style.backgroundColor='#198754';
+}
+
+function changeButtonColorReset() {
+    var allButtonForReset = document.getElementsByTagName('button');
+    for (let i = 0; i < allButton.length; i++) {
+        allButton[i].classList.remove(allButtonForReset[i].classList[1]);
+        allButton[i].classList.add(allButtonClass[i]);
+    }
+    document.getElementById('rps-reset').style.backgroundColor='rgb(220, 53, 69)';
+}
+
+function changeButtonColorRandom(){
+    var allButtonForReset = document.getElementsByTagName('button');
+    for (let i = 0; i < allButton.length; i++) {
+        var randomColorAssist = ['btn-primary','btn-danger','btn-warning','btn-success'];
+        botColorChoice = randomColorAssist[Math.floor(Math.random()*randomColorAssist.length)];
+        allButton[i].classList.remove(allButtonForReset[i].classList[1]);
+        allButton[i].classList.add(botColorChoice);
+    }
+    var randomColorAssist2 = ['rgb(220, 53, 69)','#0d6efd','#198754','#ffc107'];
+    botColorChoice2 = randomColorAssist2[Math.floor(Math.random()*randomColorAssist2.length)];
+
+    document.getElementById('rps-reset').style.backgroundColor=botColorChoice2;
+}
+
+// background-color: rgb(220, 53, 69); red
+// blue background-color: #0d6efd;
+// yellow background-color: #ffc107;
+// green background-color: #198754;
